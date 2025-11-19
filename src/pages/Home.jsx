@@ -163,17 +163,17 @@ const Home = () => {
             ].map((item, index) => (
               <motion.div 
                 key={index} 
-                className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+                className="flex items-start space-x-4 sm:space-x-5 bg-white p-6 sm:p-7 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto sm:mx-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center text-white text-2xl sm:text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center text-white text-2xl sm:text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <item.icon />
                 </div>
-                <div className="text-center sm:text-left">
+                <div className="flex-1">
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>

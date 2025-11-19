@@ -136,21 +136,21 @@ const About = () => {
             ].map((step, index) => (
               <motion.div 
                 key={index} 
-                className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 items-start"
+                className="flex items-start space-x-5 lg:space-x-6"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold flex-shrink-0 shadow-lg mx-auto sm:mx-0">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold flex-shrink-0 shadow-lg">
                   {step.num}
                 </div>
                 <motion.div 
-                  className="flex-1 bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  className="flex-1 bg-white p-6 sm:p-7 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
                   whileHover={{ scale: 1.02 }}
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">{step.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center sm:text-left">{step.desc}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{step.desc}</p>
                 </motion.div>
               </motion.div>
             ))}
