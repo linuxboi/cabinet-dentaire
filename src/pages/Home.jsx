@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar, FaAward, FaUserMd, FaShieldAlt, FaTooth, FaSmile, FaHeart } from 'react-icons/fa';
+import CTA from '../components/CTA';
 
 const Home = () => {
   const fadeInUp = {
@@ -221,37 +222,7 @@ const Home = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhKSIvPjwvc3ZnPg==')] opacity-30"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.h2 
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4"
-            {...fadeInUp}
-          >
-            Prêt à retrouver votre sourire ?
-          </motion.h2>
-          <motion.p 
-            className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-95 max-w-2xl mx-auto px-4"
-            {...fadeInUp}
-          >
-            Prenez rendez-vous dès aujourd'hui pour une consultation personnalisée
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            <Link to="/contact" className="btn btn-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-2xl hover:scale-105 transition-transform">
-              Prendre rendez-vous
-            </Link>
-            <a href="https://wa.me/212XXXXXXXXX" className="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-primary-600 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 hover:scale-105 transition-transform">
-              WhatsApp
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 };

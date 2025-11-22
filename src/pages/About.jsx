@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaHeart, FaUsers, FaAward, FaShieldAlt } from 'react-icons/fa';
+import Stats from '../components/Stats';
+import CTA from '../components/CTA';
 
 const About = () => {
   const fadeInUp = {
@@ -159,32 +161,7 @@ const About = () => {
       </section>
 
       {/* Nos Chiffres */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhKSIvPjwvc3ZnPg==')] opacity-30"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-            {[
-              { number: '17+', label: 'Années d\'expérience' },
-              { number: '5000+', label: 'Patients satisfaits' },
-              { number: '100%', label: 'Équipements modernes' },
-              { number: '★★★★★', label: 'Avis Google' }
-            ].map((stat, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5, type: "spring" }}
-                whileHover={{ scale: 1.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all"
-              >
-                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2">{stat.number}</div>
-                <div className="text-sm sm:text-base lg:text-lg opacity-95">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Stats />
     </div>
   );
 };
