@@ -1,0 +1,85 @@
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gray-900 text-white pt-20 pb-10 mt-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Column 1: Brand */}
+          <div>
+            <Link to="/" className="block mb-6">
+              <span className="text-3xl font-bold tracking-tight text-white">Mandarona</span>
+              <span className="block text-sm text-gray-400 font-medium tracking-widest uppercase mt-1">Centre Dentaire</span>
+            </Link>
+            <p className="text-gray-400 leading-relaxed mb-6 italic font-light text-lg">
+              « Souriez, le bonheur est contagieux. »
+            </p>
+            <div className="flex space-x-4">
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                   <FaFacebookF />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                   <FaInstagram />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                   <FaLinkedinIn />
+                </a>
+             </div>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white">Liens Rapides</h3>
+            <ul className="space-y-3">
+              <li><Link to="/" className="text-gray-400 hover:text-primary-400 transition-colors">Accueil</Link></li>
+              <li><Link to="/equipe" className="text-gray-400 hover:text-primary-400 transition-colors">Notre Équipe</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-primary-400 transition-colors">Nos Soins</Link></li>
+              <li><Link to="/avant-apres" className="text-gray-400 hover:text-primary-400 transition-colors">Galerie Avant/Après</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-primary-400 transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Contact */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white">Contact</h3>
+             <div className="space-y-4">
+               <div className="flex items-start gap-3 text-gray-400">
+                 <FaMapMarkerAlt className="mt-1 text-primary-500 flex-shrink-0" />
+                 <p>123 Boulevard Mohammed V,<br/>Casablanca 20000, Maroc</p>
+               </div>
+               <div className="flex items-center gap-3 text-gray-400">
+                 <FaPhone className="text-primary-500 flex-shrink-0" />
+                 <p>+212 5XX XX XX XX</p>
+               </div>
+               <div className="flex items-center gap-3 text-gray-400">
+                 <FaEnvelope className="text-primary-500 flex-shrink-0" />
+                 <p>contact@mandarona.ma</p>
+               </div>
+             </div>
+          </div>
+
+          {/* Column 4: Legal */}
+          <div>
+             <h3 className="text-lg font-bold mb-6 text-white">Informations Légales</h3>
+             <ul className="space-y-3">
+              <li><Link to="/mentions-legales" className="text-gray-400 hover:text-primary-400 transition-colors">Mentions légales</Link></li>
+              <li><Link to="/politique-confidentialite" className="text-gray-400 hover:text-primary-400 transition-colors">Politique de confidentialité</Link></li>
+              <li><Link to="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors">Gestion des cookies</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+           <p>&copy; {currentYear} Centre Dentaire Mandarona. Tous droits réservés.</p>
+           <p className="mt-2 md:mt-0">Conçu avec soin pour votre sourire.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
