@@ -1,0 +1,348 @@
+{
+    "header": {
+        "home": "Home",
+        "team": "Team",
+        "services": "Services",
+        "beforeAfter": "Before/After",
+        "contact": "Contact",
+        "bookAppointment": "Book Appointment",
+        "dentalCenter": "Dental Center"
+    },
+    "footer": {
+        "slogan": "Smile, happiness is contagious.",
+        "quickLinks": "Quick Links",
+        "ourTeam": "Our Team",
+        "ourServices": "Our Services",
+        "gallery": "Before/After Gallery",
+        "blog": "Blog",
+        "contact": "Contact",
+        "legalInfo": "Legal Information",
+        "legalMentions": "Legal Mentions",
+        "privacyPolicy": "Privacy Policy",
+        "cookieManagement": "Cookie Management",
+        "allRightsReserved": "All rights reserved.",
+        "designedWithCare": "Designed with care for your smile."
+    },
+    "cta": {
+        "title": "Ready to get your smile back?",
+        "subtitle": "Book an appointment today for a personalized consultation",
+        "button": "Book Appointment",
+        "whatsapp": "WhatsApp"
+    },
+    "stats": {
+        "yearsExperience": "Years of Experience",
+        "satisfiedPatients": "Satisfied Patients",
+        "googleReviews": "Google Reviews",
+        "modernEquipment": "Modern Equipment",
+        "qualityCommitment": "Quality Commitment"
+    },
+    "whatsappButton": {
+        "message": "Hello, I would like to book an appointment at Mandarona Dental Center.",
+        "tooltip": "Contact Us"
+    },
+    "home": {
+        "hero": {
+            "title": "Smile, happiness <br/> <span class=\"font-medium\">is contagious</span>",
+            "subtitle": "Welcome to Mandarona Dental Center. A team of experts dedicated to your oral health in a modern and warm setting.",
+            "bookAppointment": "Book Appointment",
+            "emergency": "Dental Emergency?",
+            "contactUs": "Contact Us",
+            "yourHealthPriority": "Your health, our priority",
+            "callUs": "Call us:"
+        },
+        "intro": {
+            "slogan": "Your smile deserves excellence.",
+            "title": "At Mandarona Dental Center, we combine clinical expertise and cutting-edge technologies to offer you personalized care.",
+            "description": "Welcome to our office! Our dentists and team look forward to caring for you and your smile. We understand how closely oral health is linked to your overall health, confidence, and appearance. We pride ourselves on cultivating a friendly and positive dental environment where you can always feel at ease.",
+            "learnMore": "Learn more"
+        },
+        "whyChooseUs": {
+            "title": "Why choose our clinic",
+            "items": {
+                "tech": {
+                    "title": "Cutting-edge Technology",
+                    "desc": "We have all the advanced equipment necessary for diagnosis and treatment."
+                },
+                "painless": {
+                    "title": "Painless Care",
+                    "desc": "The expertise and professionalism of our doctors allow you to benefit from painless care."
+                },
+                "transparency": {
+                    "title": "Transparency",
+                    "desc": "No hidden fees. Prices are clear and correspond to the established estimates."
+                },
+                "expertTeam": {
+                    "title": "Expert Team",
+                    "desc": "Our doctors constantly improve their skills by participating in international conferences."
+                }
+            }
+        },
+        "everythingYouNeed": {
+            "title": "Everything for a <span class=\"font-medium\">radiant smile</span>",
+            "subtitle": "Your comfort is our priority",
+            "items": [
+                "Modern technology",
+                "A friendly and attentive team",
+                "Gentle dentistry to relax you",
+                "We accept many insurances",
+                "Ecological and sustainable approach"
+            ],
+            "more": "...and much more!"
+        },
+        "services": {
+            "expertise": "Our Expertise",
+            "title": "Our Services",
+            "allServices": "All our services",
+            "items": {
+                "orthodontics": {
+                    "title": "Orthodontics",
+                    "desc": "Dental alignment and correction of malpositions for a harmonious smile (Children & Adults)."
+                },
+                "carePrevention": {
+                    "title": "Care & Prevention",
+                    "desc": "Regular checkups, scaling, and preventive treatments for your oral health."
+                },
+                "esthetic": {
+                    "title": "Dental Esthetics",
+                    "desc": "Whitening, veneers, and esthetic restorations to enhance your smile."
+                },
+                "surgery": {
+                    "title": "Dental Surgery",
+                    "desc": "Extractions, implants, and surgical interventions performed with expertise."
+                },
+                "periodontics": {
+                    "title": "Periodontics",
+                    "desc": "Treatment of gum diseases to preserve the foundations of your teeth."
+                },
+                "prosthesis": {
+                    "title": "Dental Prosthesis",
+                    "desc": "Fixed or removable solutions to replace missing teeth and restore function."
+                }
+            },
+            "learnMore": "Learn more"
+        },
+        "team": {
+            "subtitle": "Our Team",
+            "title": "Experts at your service",
+            "viewAll": "View all team",
+            "roles": {
+                "surgeon": "Dental Surgeon",
+                "orthodontist": "Orthodontist",
+                "implantologist": "Implantologist"
+            }
+        },
+        "quote": {
+            "text": "\"I love getting involved in my community. As a dentist, you meet a lot of people and have the opportunity to help many.\"",
+            "author": "Dr. Mandarona"
+        },
+        "news": {
+            "title": "News",
+            "viewBlog": "View blog",
+            "readMore": "Read more",
+            "items": {
+                "checkups": {
+                    "title": "The importance of regular checkups",
+                    "desc": "Discover the latest tips from our dental experts to keep your smile healthy and radiant."
+                },
+                "tips": {
+                    "title": "Tips for a radiant smile",
+                    "desc": "Discover the latest tips from our dental experts to keep your smile healthy and radiant."
+                },
+                "implants": {
+                    "title": "Understanding dental implants",
+                    "desc": "Discover the latest tips from our dental experts to keep your smile healthy and radiant."
+                }
+            }
+        },
+        "testimonials": {
+            "text": "\"A fantastic experience, which gave me confidence in the quality of care.\"",
+            "note": "Rated 4.9 based on 500+ reviews"
+        }
+    },
+    "about": {
+        "hero": {
+            "subtitle": "ABOUT US",
+            "title": "Your smile, <br/> <span class=\"font-bold\">our passion</span>",
+            "description": "For over 17 years, Mandarona Dental Center has been committed to offering excellent care in a warm and modern setting. Our philosophy is based on listening, expertise, and innovation."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "description": "We believe that every smile tells a unique story. Our mission is to enhance yours through a personalized approach, combining cutting-edge technologies and benevolence.",
+            "items": {
+                "benevolence": {
+                    "title": "Benevolence",
+                    "desc": "Attentive listening and optimal comfort for every patient."
+                },
+                "excellence": {
+                    "title": "Excellence",
+                    "desc": "High-quality care performed by passionate experts."
+                },
+                "safety": {
+                    "title": "Safety",
+                    "desc": "Strict hygiene protocols for your peace of mind."
+                }
+            }
+        },
+        "approach": {
+            "quote": "\"Technology at the service of humanity.\"",
+            "subtitle": "OUR APPROACH",
+            "title": "A care journey <br/> <span class=\"font-bold\">tailor-made</span>",
+            "steps": {
+                "1": {
+                    "title": "Consultation & Diagnosis",
+                    "desc": "Complete assessment with 3D imaging for a precise vision."
+                },
+                "2": {
+                    "title": "Treatment Plan",
+                    "desc": "Detailed and transparent proposal adapted to your needs."
+                },
+                "3": {
+                    "title": "Care & Follow-up",
+                    "desc": "Care performed gently and rigorous follow-up."
+                }
+            }
+        }
+    },
+    "servicesPage": {
+        "hero": {
+            "title": "Our Services",
+            "description": "Discover our complete range of dental care for the whole family."
+        },
+        "categories": {
+            "surgery": "SURGERY",
+            "kids": "CHILDREN CARE",
+            "esthetic": "ESTHETICS",
+            "periodontics": "PERIODONTICS",
+            "emergency": "EMERGENCIES",
+            "orthodontics": "ORTHODONTICS",
+            "prevention": "PREVENTION"
+        },
+        "items": {
+            "implantology": "Implantology",
+            "pedodontics": "Pedodontics",
+            "whitening": "Dental Whitening",
+            "extraction": "Dental Extraction",
+            "gumCare": "Gum Care",
+            "emergencies": "Dental Emergencies",
+            "alignment": "Dental Alignment",
+            "conservative": "Conservative Care",
+            "veneers": "Dental Veneers"
+        },
+        "learnMore": "Learn more",
+        "cta": {
+            "subtitle": "FREE CONSULTATION",
+            "title": "Get your smile back <br/> thanks to <br/> dental implants",
+            "description": "Our team of experts in implantology accompanies you to restore your smile with durable and aesthetic solutions.",
+            "button": "Book Appointment"
+        }
+    },
+    "gallery": {
+        "hero": {
+            "subtitle": "GALLERY",
+            "title": "Results <br/> <span class=\"font-bold\">that speak for themselves</span>",
+            "description": "Discover the transformations achieved by our team. Each smile is unique and deserves special attention."
+        },
+        "categories": {
+            "orthodontics": "Orthodontics",
+            "esthetic": "Esthetics",
+            "implantology": "Implantology",
+            "general": "General"
+        },
+        "cases": {
+            "1": {
+                "title": "Orthodontics - Dental Alignment",
+                "desc": "Complete correction of dental alignment in 18 months"
+            },
+            "2": {
+                "title": "Professional Dental Whitening",
+                "desc": "Lightening of 8 shades in a single session"
+            },
+            "3": {
+                "title": "Ceramic Veneers",
+                "desc": "Complete smile transformation with veneers"
+            },
+            "4": {
+                "title": "Dental Implants",
+                "desc": "Replacement of missing teeth with implants"
+            },
+            "5": {
+                "title": "Invisible Orthodontics",
+                "desc": "Treatment with transparent aligners"
+            },
+            "6": {
+                "title": "Complete Rehabilitation",
+                "desc": "Complete aesthetic and functional restoration"
+            }
+        },
+        "before": "BEFORE",
+        "after": "AFTER",
+        "allCases": "All our cases",
+        "explore": "Explore our complete gallery of transformations.",
+        "cta": {
+            "title": "Ready to transform <span class=\"font-bold\">your smile?</span>",
+            "button": "Book Appointment"
+        }
+    },
+    "teamPage": {
+        "hero": {
+            "title": "Our Team",
+            "description": "Meet the talented team of our clinic, dedicated to providing personalized care to each of our patients."
+        },
+        "roles": {
+            "esthetic": "Dental Esthetics",
+            "preventive": "Preventive Care",
+            "orthodontics": "Orthodontics",
+            "specialized": "Specialized Care"
+        },
+        "viewProfile": "View Profile",
+        "cta": {
+            "title": "Book an appointment <br/> <span class=\"font-medium\">today</span>",
+            "description": "With years of experience and a commitment to continuing education, our doctors are experts in their field and strive to provide the highest level of dental care."
+        }
+    },
+    "contact": {
+        "hero": {
+            "subtitle": "CONTACT",
+            "title": "We are <br/> <span class=\"font-bold\">at your service</span>",
+            "description": "A question? An appointment? Our team is here to answer you and accompany you."
+        },
+        "info": {
+            "title": "Our Contact Info",
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "hours": {
+                "title": "Opening Hours",
+                "week": "Monday - Friday",
+                "saturday": "Saturday",
+                "sunday": "Sunday",
+                "closed": "Closed"
+            }
+        },
+        "form": {
+            "title": "Send us <span class=\"font-bold\">a message</span>",
+            "name": "Full Name",
+            "namePlaceholder": "Your name",
+            "phone": "Phone",
+            "phonePlaceholder": "Your number",
+            "email": "Email",
+            "emailPlaceholder": "your@email.com",
+            "subject": "Subject",
+            "subjects": {
+                "consultation": "General Consultation",
+                "orthodontics": "Orthodontics",
+                "esthetic": "Dental Esthetics",
+                "implants": "Implantology",
+                "emergency": "Emergency"
+            },
+            "message": "Message",
+            "messagePlaceholder": "How can we help you?",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully! We will reply to you shortly."
+        },
+        "map": {
+            "title": "Google Maps"
+        }
+    }
+}

@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const beforeAfterCases = [
-    { id: 1, title: 'Orthodontie - Alignement dentaire', category: 'Orthodontie', description: 'Correction complète de l\'alignement dentaire en 18 mois' },
-    { id: 2, title: 'Blanchiment dentaire professionnel', category: 'Esthétique', description: 'Éclaircissement de 8 teintes en une seule séance' },
-    { id: 3, title: 'Facettes en céramique', category: 'Esthétique', description: 'Transformation complète du sourire avec facettes' },
-    { id: 4, title: 'Implants dentaires', category: 'Implantologie', description: 'Remplacement de dents manquantes avec implants' },
-    { id: 5, title: 'Orthodontie invisible', category: 'Orthodontie', description: 'Traitement par aligneurs transparents' },
-    { id: 6, title: 'Réhabilitation complète', category: 'Général', description: 'Restauration esthétique et fonctionnelle complète' }
+    { id: 1, title: t('gallery.cases.1.title'), category: t('gallery.categories.orthodontics'), description: t('gallery.cases.1.desc') },
+    { id: 2, title: t('gallery.cases.2.title'), category: t('gallery.categories.esthetic'), description: t('gallery.cases.2.desc') },
+    { id: 3, title: t('gallery.cases.3.title'), category: t('gallery.categories.esthetic'), description: t('gallery.cases.3.desc') },
+    { id: 4, title: t('gallery.cases.4.title'), category: t('gallery.categories.implantology'), description: t('gallery.cases.4.desc') },
+    { id: 5, title: t('gallery.cases.5.title'), category: t('gallery.categories.orthodontics'), description: t('gallery.cases.5.desc') },
+    { id: 6, title: t('gallery.cases.6.title'), category: t('gallery.categories.general'), description: t('gallery.cases.6.desc') }
   ];
 
   const nextSlide = () => setCurrentIndex((prev) => (prev === beforeAfterCases.length - 1 ? 0 : prev + 1));
@@ -29,14 +31,11 @@ const Gallery = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
-              GALERIE
+              {t('gallery.hero.subtitle')}
             </span>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight">
-              Des résultats <br/>
-              <span className="font-bold">qui parlent d'eux-mêmes</span>
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('gallery.hero.title') }} />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Découvrez les transformations réalisées par notre équipe. Chaque sourire est unique et mérite une attention particulière.
+              {t('gallery.hero.description')}
             </p>
           </motion.div>
         </div>
@@ -53,7 +52,7 @@ const Gallery = () => {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[3rem] shadow-2xl p-8 md:p-12 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary-600 to-accent-500"></div>
-              
+
               <div className="text-center mb-12">
                 <span className="inline-block px-6 py-2 bg-accent-100 text-primary-600 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
                   {beforeAfterCases[currentIndex].category}
@@ -67,7 +66,7 @@ const Gallery = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
                 <div className="relative group">
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
-                    AVANT
+                    {t('gallery.before')}
                   </div>
                   <div className="h-80 bg-gray-200 rounded-[2rem] overflow-hidden shadow-inner">
                     {/* Placeholder for Before Image */}
@@ -79,7 +78,7 @@ const Gallery = () => {
 
                 <div className="relative group">
                   <div className="absolute top-4 left-4 bg-primary-600/90 text-white backdrop-blur px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
-                    APRÈS
+                    {t('gallery.after')}
                   </div>
                   <div className="h-80 bg-accent-100 rounded-[2rem] overflow-hidden shadow-inner">
                     {/* Placeholder for After Image */}
@@ -104,9 +103,8 @@ const Gallery = () => {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`h-3 rounded-full transition-all duration-300 ${
-                        index === currentIndex ? 'bg-primary-600 w-10' : 'bg-gray-300 w-3 hover:bg-accent-500'
-                      }`}
+                      className={`h-3 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-primary-600 w-10' : 'bg-gray-300 w-3 hover:bg-accent-500'
+                        }`}
                       aria-label={`Aller au cas ${index + 1}`}
                     />
                   ))}
@@ -129,18 +127,17 @@ const Gallery = () => {
       <section className="py-20 bg-primary-600 text-white rounded-t-[3rem]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-light mb-6">Tous nos cas</h2>
-            <p className="opacity-80 max-w-2xl mx-auto text-lg">Explorez notre galerie complète de transformations.</p>
+            <h2 className="text-3xl md:text-5xl font-light mb-6">{t('gallery.allCases')}</h2>
+            <p className="opacity-80 max-w-2xl mx-auto text-lg">{t('gallery.explore')}</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {beforeAfterCases.map((item, index) => (
               <motion.div
                 key={item.id}
                 onClick={() => goToSlide(index)}
-                className={`bg-white rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 group ${
-                  index === currentIndex ? 'ring-4 ring-accent-500' : ''
-                }`}
+                className={`bg-white rounded-[2rem] overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 group ${index === currentIndex ? 'ring-4 ring-accent-500' : ''
+                  }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -164,14 +161,12 @@ const Gallery = () => {
       {/* CTA */}
       <section className="py-20 lg:py-32 bg-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-light text-primary-600 mb-8">
-            Prêt à transformer <span className="font-bold">votre sourire ?</span>
-          </h2>
-          <a 
-            href="/contact" 
+          <h2 className="text-4xl md:text-5xl font-light text-primary-600 mb-8" dangerouslySetInnerHTML={{ __html: t('gallery.cta.title') }} />
+          <a
+            href="/contact"
             className="inline-block bg-accent-100 text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Prendre rendez-vous
+            {t('gallery.cta.button')}
           </a>
         </div>
       </section>

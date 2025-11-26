@@ -1,0 +1,348 @@
+{
+    "header": {
+        "home": "Accueil",
+        "team": "Équipe",
+        "services": "Soins",
+        "beforeAfter": "Avant/Après",
+        "contact": "Contact",
+        "bookAppointment": "Prendre rendez-vous",
+        "dentalCenter": "Centre Dentaire"
+    },
+    "footer": {
+        "slogan": "« Souriez, le bonheur est contagieux. »",
+        "quickLinks": "Liens Rapides",
+        "ourTeam": "Notre Équipe",
+        "ourServices": "Nos Soins",
+        "gallery": "Galerie Avant/Après",
+        "blog": "Blog",
+        "contact": "Contact",
+        "legalInfo": "Informations Légales",
+        "legalMentions": "Mentions légales",
+        "privacyPolicy": "Politique de confidentialité",
+        "cookieManagement": "Gestion des cookies",
+        "allRightsReserved": "Tous droits réservés.",
+        "designedWithCare": "Conçu avec soin pour votre sourire."
+    },
+    "cta": {
+        "title": "Prêt à retrouver votre sourire ?",
+        "subtitle": "Prenez rendez-vous dès aujourd'hui pour une consultation personnalisée",
+        "button": "Prendre rendez-vous",
+        "whatsapp": "WhatsApp"
+    },
+    "stats": {
+        "yearsExperience": "Années d'expérience",
+        "satisfiedPatients": "Patients satisfaits",
+        "googleReviews": "Avis Google",
+        "modernEquipment": "Équipements modernes",
+        "qualityCommitment": "Engagement qualité"
+    },
+    "whatsappButton": {
+        "message": "Bonjour, je souhaite prendre rendez-vous au Centre Dentaire Mandarona.",
+        "tooltip": "Contactez-nous"
+    },
+    "home": {
+        "hero": {
+            "title": "Souriez, le bonheur <br/> <span class=\"font-medium\">est contagieux</span>",
+            "subtitle": "Bienvenue au Centre Dentaire Mandarona. Une équipe d'experts dédiée à votre santé bucco-dentaire dans un cadre moderne et chaleureux.",
+            "bookAppointment": "Prendre Rendez-vous",
+            "emergency": "Urgence dentaire ?",
+            "contactUs": "Contactez-nous",
+            "yourHealthPriority": "Votre santé, notre priorité",
+            "callUs": "Appelez-nous :"
+        },
+        "intro": {
+            "slogan": "Votre sourire mérite l'excellence.",
+            "title": "Au Centre Dentaire Mandarona, nous allions expertise clinique et technologies de pointe pour vous offrir des soins personnalisés.",
+            "description": "Bienvenue dans notre cabinet ! Nos dentistes et notre équipe sont impatients de prendre soin de vous et de votre sourire. Nous comprenons à quel point la santé bucco-dentaire est liée à votre santé globale, votre confiance et votre apparence. Nous sommes fiers de cultiver un environnement dentaire amical et positif où vous pourrez toujours vous sentir à l'aise.",
+            "learnMore": "En savoir plus"
+        },
+        "whyChooseUs": {
+            "title": "Pourquoi choisir notre clinique",
+            "items": {
+                "tech": {
+                    "title": "Technologie de pointe",
+                    "desc": "Nous disposons de tous les équipements avancés nécessaires pour le diagnostic et le traitement."
+                },
+                "painless": {
+                    "title": "Soins sans douleur",
+                    "desc": "Le savoir-faire et le professionnalisme de nos médecins vous permettent de bénéficier de soins sans douleur."
+                },
+                "transparency": {
+                    "title": "Transparence",
+                    "desc": "Pas de frais cachés. Les prix sont clairs et correspondent aux devis établis."
+                },
+                "expertTeam": {
+                    "title": "Équipe experte",
+                    "desc": "Nos médecins améliorent constamment leurs compétences en participant à des conférences internationales."
+                }
+            }
+        },
+        "everythingYouNeed": {
+            "title": "Tout pour un <span class=\"font-medium\">sourire éclatant</span>",
+            "subtitle": "Votre confort est notre priorité",
+            "items": [
+                "Technologie moderne",
+                "Une équipe amicale et à l'écoute",
+                "Dentisterie douce pour vous détendre",
+                "Nous acceptons de nombreuses mutuelles",
+                "Approche écologique et durable"
+            ],
+            "more": "...et bien plus encore !"
+        },
+        "services": {
+            "expertise": "Nos Expertises",
+            "title": "Nos Services",
+            "allServices": "Tous nos soins",
+            "items": {
+                "orthodontics": {
+                    "title": "Orthodontie",
+                    "desc": "Alignement dentaire et correction des malpositions pour un sourire harmonieux (Enfants & Adultes)."
+                },
+                "carePrevention": {
+                    "title": "Soins & Prévention",
+                    "desc": "Contrôles réguliers, détartrage et traitements préventifs pour votre santé bucco-dentaire."
+                },
+                "esthetic": {
+                    "title": "Esthétique Dentaire",
+                    "desc": "Blanchiment, facettes et restaurations esthétiques pour sublimer votre sourire."
+                },
+                "surgery": {
+                    "title": "Chirurgie Dentaire",
+                    "desc": "Extractions, implants et interventions chirurgicales réalisées avec expertise."
+                },
+                "periodontics": {
+                    "title": "Parodontie",
+                    "desc": "Traitement des maladies des gencives pour préserver les fondations de vos dents."
+                },
+                "prosthesis": {
+                    "title": "Prothèse Dentaire",
+                    "desc": "Solutions fixes ou amovibles pour remplacer les dents manquantes et restaurer la fonction."
+                }
+            },
+            "learnMore": "En savoir plus"
+        },
+        "team": {
+            "subtitle": "Notre Équipe",
+            "title": "Des experts à votre écoute",
+            "viewAll": "Voir toute l'équipe",
+            "roles": {
+                "surgeon": "Chirurgien Dentiste",
+                "orthodontist": "Orthodontiste",
+                "implantologist": "Implantologue"
+            }
+        },
+        "quote": {
+            "text": "\"J'aime m'impliquer auprès de ma communauté. En tant que dentiste, on rencontre beaucoup de gens et on a la possibilité d'aider beaucoup de monde.\"",
+            "author": "Dr. Mandarona"
+        },
+        "news": {
+            "title": "Actualités",
+            "viewBlog": "Voir le blog",
+            "readMore": "Lire la suite",
+            "items": {
+                "checkups": {
+                    "title": "L'importance des contrôles réguliers",
+                    "desc": "Découvrez les derniers conseils de nos experts dentaires pour garder votre sourire sain et éclatant."
+                },
+                "tips": {
+                    "title": "Conseils pour un sourire éclatant",
+                    "desc": "Découvrez les derniers conseils de nos experts dentaires pour garder votre sourire sain et éclatant."
+                },
+                "implants": {
+                    "title": "Comprendre les implants dentaires",
+                    "desc": "Découvrez les derniers conseils de nos experts dentaires pour garder votre sourire sain et éclatant."
+                }
+            }
+        },
+        "testimonials": {
+            "text": "\"Une expérience fantastique, qui m'a donné confiance en la qualité des soins.\"",
+            "note": "Note de 4.9 basée sur 500+ avis"
+        }
+    },
+    "about": {
+        "hero": {
+            "subtitle": "À PROPOS DE NOUS",
+            "title": "Votre sourire, <br/> <span class=\"font-bold\">notre passion</span>",
+            "description": "Depuis plus de 17 ans, le Centre Dentaire Mandarona s'engage à offrir des soins d'excellence dans un cadre chaleureux et moderne. Notre philosophie repose sur l'écoute, l'expertise et l'innovation."
+        },
+        "mission": {
+            "title": "Notre Mission",
+            "description": "Nous croyons que chaque sourire raconte une histoire unique. Notre mission est de sublimer le vôtre grâce à une approche personnalisée, alliant technologies de pointe et bienveillance.",
+            "items": {
+                "benevolence": {
+                    "title": "Bienveillance",
+                    "desc": "Une écoute attentive et un confort optimal pour chaque patient."
+                },
+                "excellence": {
+                    "title": "Excellence",
+                    "desc": "Des soins de haute qualité réalisés par des experts passionnés."
+                },
+                "safety": {
+                    "title": "Sécurité",
+                    "desc": "Des protocoles d'hygiène stricts pour votre tranquillité d'esprit."
+                }
+            }
+        },
+        "approach": {
+            "quote": "\"La technologie au service de l'humain.\"",
+            "subtitle": "NOTRE APPROCHE",
+            "title": "Un parcours de soins <br/> <span class=\"font-bold\">sur mesure</span>",
+            "steps": {
+                "1": {
+                    "title": "Consultation & Diagnostic",
+                    "desc": "Bilan complet avec imagerie 3D pour une vision précise."
+                },
+                "2": {
+                    "title": "Plan de Traitement",
+                    "desc": "Proposition détaillée et transparente adaptée à vos besoins."
+                },
+                "3": {
+                    "title": "Soins & Suivi",
+                    "desc": "Réalisation des soins en douceur et suivi rigoureux."
+                }
+            }
+        }
+    },
+    "servicesPage": {
+        "hero": {
+            "title": "Nos Services",
+            "description": "Découvrez notre gamme complète de soins dentaires pour toute la famille."
+        },
+        "categories": {
+            "surgery": "CHIRURGIE",
+            "kids": "SOINS ENFANTS",
+            "esthetic": "ESTHÉTIQUE",
+            "periodontics": "PARODONTIE",
+            "emergency": "URGENCES",
+            "orthodontics": "ORTHODONTIE",
+            "prevention": "PRÉVENTION"
+        },
+        "items": {
+            "implantology": "Implantologie",
+            "pedodontics": "Pédodontie",
+            "whitening": "Blanchiment Dentaire",
+            "extraction": "Extraction Dentaire",
+            "gumCare": "Soins des Gencives",
+            "emergencies": "Urgences Dentaires",
+            "alignment": "Alignement Dentaire",
+            "conservative": "Soins Conservateurs",
+            "veneers": "Facettes Dentaires"
+        },
+        "learnMore": "En savoir plus",
+        "cta": {
+            "subtitle": "CONSULTATION OFFERTE",
+            "title": "Retrouvez le sourire <br/> grâce aux <br/> implants dentaires",
+            "description": "Notre équipe d'experts en implantologie vous accompagne pour restaurer votre sourire avec des solutions durables et esthétiques.",
+            "button": "Prendre rendez-vous"
+        }
+    },
+    "gallery": {
+        "hero": {
+            "subtitle": "GALERIE",
+            "title": "Des résultats <br/> <span class=\"font-bold\">qui parlent d'eux-mêmes</span>",
+            "description": "Découvrez les transformations réalisées par notre équipe. Chaque sourire est unique et mérite une attention particulière."
+        },
+        "categories": {
+            "orthodontics": "Orthodontie",
+            "esthetic": "Esthétique",
+            "implantology": "Implantologie",
+            "general": "Général"
+        },
+        "cases": {
+            "1": {
+                "title": "Orthodontie - Alignement dentaire",
+                "desc": "Correction complète de l'alignement dentaire en 18 mois"
+            },
+            "2": {
+                "title": "Blanchiment dentaire professionnel",
+                "desc": "Éclaircissement de 8 teintes en une seule séance"
+            },
+            "3": {
+                "title": "Facettes en céramique",
+                "desc": "Transformation complète du sourire avec facettes"
+            },
+            "4": {
+                "title": "Implants dentaires",
+                "desc": "Remplacement de dents manquantes avec implants"
+            },
+            "5": {
+                "title": "Orthodontie invisible",
+                "desc": "Traitement par aligneurs transparents"
+            },
+            "6": {
+                "title": "Réhabilitation complète",
+                "desc": "Restauration esthétique et fonctionnelle complète"
+            }
+        },
+        "before": "AVANT",
+        "after": "APRÈS",
+        "allCases": "Tous nos cas",
+        "explore": "Explorez notre galerie complète de transformations.",
+        "cta": {
+            "title": "Prêt à transformer <span class=\"font-bold\">votre sourire ?</span>",
+            "button": "Prendre rendez-vous"
+        }
+    },
+    "teamPage": {
+        "hero": {
+            "title": "Notre Équipe",
+            "description": "Rencontrez l'équipe talentueuse de notre clinique, dédiée à fournir des soins personnalisés à chacun de nos patients."
+        },
+        "roles": {
+            "esthetic": "Esthétique Dentaire",
+            "preventive": "Soins Préventifs",
+            "orthodontics": "Orthodontie",
+            "specialized": "Soins Spécialisés"
+        },
+        "viewProfile": "Voir le profil",
+        "cta": {
+            "title": "Prenez rendez-vous <br/> <span class=\"font-medium\">dès aujourd'hui</span>",
+            "description": "Avec des années d'expérience et un engagement envers la formation continue, nos médecins sont des experts dans leur domaine et s'efforcent de fournir le plus haut niveau de soins dentaires."
+        }
+    },
+    "contact": {
+        "hero": {
+            "subtitle": "CONTACT",
+            "title": "Nous sommes <br/> <span class=\"font-bold\">à votre écoute</span>",
+            "description": "Une question ? Un rendez-vous ? Notre équipe est là pour vous répondre et vous accompagner."
+        },
+        "info": {
+            "title": "Nos Coordonnées",
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "email": "Email",
+            "hours": {
+                "title": "Horaires d'ouverture",
+                "week": "Lundi - Vendredi",
+                "saturday": "Samedi",
+                "sunday": "Dimanche",
+                "closed": "Fermé"
+            }
+        },
+        "form": {
+            "title": "Envoyez-nous <span class=\"font-bold\">un message</span>",
+            "name": "Nom complet",
+            "namePlaceholder": "Votre nom",
+            "phone": "Téléphone",
+            "phonePlaceholder": "Votre numéro",
+            "email": "Email",
+            "emailPlaceholder": "votre@email.com",
+            "subject": "Sujet",
+            "subjects": {
+                "consultation": "Consultation générale",
+                "orthodontics": "Orthodontie",
+                "esthetic": "Esthétique dentaire",
+                "implants": "Implantologie",
+                "emergency": "Urgence"
+            },
+            "message": "Message",
+            "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+            "submit": "Envoyer le message",
+            "sending": "Envoi en cours...",
+            "success": "Message envoyé avec succès ! Nous vous répondrons rapidement."
+        },
+        "map": {
+            "title": "Carte Google Maps"
+        }
+    }
+}

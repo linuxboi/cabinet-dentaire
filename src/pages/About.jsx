@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { FaHeart, FaUsers, FaAward, FaShieldAlt, FaTooth } from 'react-icons/fa';
 import Stats from '../components/Stats';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     whileInView: { opacity: 1, y: 0 },
@@ -16,49 +18,46 @@ const About = () => {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
-                À PROPOS DE NOUS
+                {t('about.hero.subtitle')}
               </span>
-              <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight">
-                Votre sourire, <br/>
-                <span className="font-bold">notre passion</span>
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('about.hero.title') }} />
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Depuis plus de 17 ans, le Centre Dentaire Mandarona s'engage à offrir des soins d'excellence dans un cadre chaleureux et moderne. Notre philosophie repose sur l'écoute, l'expertise et l'innovation.
+                {t('about.hero.description')}
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-4 bg-accent-100 px-6 py-4 rounded-2xl">
                   <FaTooth className="text-2xl" />
                   <div>
                     <span className="block font-bold text-xl">17+</span>
-                    <span className="text-sm">Années d'expérience</span>
+                    <span className="text-sm">{t('stats.yearsExperience')}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 bg-accent-50 px-6 py-4 rounded-2xl">
                   <FaUsers className="text-2xl" />
                   <div>
                     <span className="block font-bold text-xl">5000+</span>
-                    <span className="text-sm">Patients satisfaits</span>
+                    <span className="text-sm">{t('stats.satisfiedPatients')}</span>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="relative"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Cabinet dentaire moderne" 
+                <img
+                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Cabinet dentaire moderne"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -74,27 +73,27 @@ const About = () => {
       <section className="py-20 bg-primary-600 text-white rounded-t-[3rem] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-5xl font-light mb-6"
               {...fadeInUp}
             >
-              Notre Mission
+              {t('about.mission.title')}
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-lg opacity-90 leading-relaxed"
               {...fadeInUp}
             >
-              Nous croyons que chaque sourire raconte une histoire unique. Notre mission est de sublimer le vôtre grâce à une approche personnalisée, alliant technologies de pointe et bienveillance.
+              {t('about.mission.description')}
             </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: FaHeart, title: 'Bienveillance', desc: 'Une écoute attentive et un confort optimal pour chaque patient.' },
-              { icon: FaAward, title: 'Excellence', desc: 'Des soins de haute qualité réalisés par des experts passionnés.' },
-              { icon: FaShieldAlt, title: 'Sécurité', desc: 'Des protocoles d\'hygiène stricts pour votre tranquillité d\'esprit.' }
+              { icon: FaHeart, title: t('about.mission.items.benevolence.title'), desc: t('about.mission.items.benevolence.desc') },
+              { icon: FaAward, title: t('about.mission.items.excellence.title'), desc: t('about.mission.items.excellence.desc') },
+              { icon: FaShieldAlt, title: t('about.mission.items.safety.title'), desc: t('about.mission.items.safety.desc') }
             ].map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm p-8 rounded-[2rem] border border-white/20 hover:bg-white/20 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -119,7 +118,7 @@ const About = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               className="order-2 lg:order-1"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -127,36 +126,33 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="relative rounded-[3rem] overflow-hidden shadow-xl h-[600px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Dentiste au travail" 
+                <img
+                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Dentiste au travail"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-600/80 to-transparent flex items-end p-10">
                   <div className="text-white">
-                    <p className="text-2xl font-light italic">"La technologie au service de l'humain."</p>
+                    <p className="text-2xl font-light italic">{t('about.approach.quote')}</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="order-1 lg:order-2"
               {...fadeInUp}
             >
               <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
-                NOTRE APPROCHE
+                {t('about.approach.subtitle')}
               </span>
-              <h2 className="text-3xl md:text-5xl font-light mb-8 text-primary-600">
-                Un parcours de soins <br/>
-                <span className="font-bold">sur mesure</span>
-              </h2>
-              
+              <h2 className="text-3xl md:text-5xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('about.approach.title') }} />
+
               <div className="space-y-8">
                 {[
-                  { num: '01', title: 'Consultation & Diagnostic', desc: 'Bilan complet avec imagerie 3D pour une vision précise.' },
-                  { num: '02', title: 'Plan de Traitement', desc: 'Proposition détaillée et transparente adaptée à vos besoins.' },
-                  { num: '03', title: 'Soins & Suivi', desc: 'Réalisation des soins en douceur et suivi rigoureux.' }
+                  { num: '01', title: t('about.approach.steps.1.title'), desc: t('about.approach.steps.1.desc') },
+                  { num: '02', title: t('about.approach.steps.2.title'), desc: t('about.approach.steps.2.desc') },
+                  { num: '03', title: t('about.approach.steps.3.title'), desc: t('about.approach.steps.3.desc') }
                 ].map((step, index) => (
                   <div key={index} className="flex gap-6 group">
                     <div className="text-4xl font-bold text-accent-100 group-hover:text-accent-500 transition-colors duration-300">

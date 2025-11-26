@@ -1,30 +1,33 @@
 import { motion } from 'framer-motion';
 import { FaAward, FaUsers, FaStar, FaTooth } from 'react-icons/fa';
 
+import { useTranslation } from 'react-i18next';
+
 const Stats = () => {
+  const { t } = useTranslation();
   const stats = [
     {
       icon: <FaAward />,
       number: '17+',
-      label: "Années d'expérience",
+      label: t('stats.yearsExperience'),
       color: 'bg-accent-100 text-primary-600'
     },
     {
       icon: <FaUsers />,
       number: '5000+',
-      label: 'Patients satisfaits',
+      label: t('stats.satisfiedPatients'),
       color: 'bg-accent-50 text-primary-600'
     },
     {
       icon: <FaStar />,
       number: '4.9',
-      label: 'Avis Google',
+      label: t('stats.googleReviews'),
       color: 'bg-accent-100 text-primary-600'
     },
     {
       icon: <FaTooth />,
       number: '100%',
-      label: 'Équipements modernes',
+      label: t('stats.modernEquipment'),
       color: 'bg-accent-50 text-primary-600'
     }
   ];
@@ -40,8 +43,8 @@ const Stats = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ 
-                delay: index * 0.1, 
+              transition={{
+                delay: index * 0.1,
                 duration: 0.5,
                 type: "spring",
                 stiffness: 200
@@ -50,16 +53,16 @@ const Stats = () => {
               <motion.div
                 className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full flex items-center justify-center text-2xl sm:text-3xl shadow-lg ${stat.color}`}
                 animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ 
-                  repeat: Infinity, 
+                transition={{
+                  repeat: Infinity,
                   duration: 3,
-                  delay: index * 0.2 
+                  delay: index * 0.2
                 }}
               >
                 {stat.icon}
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +71,7 @@ const Stats = () => {
               >
                 {stat.number}
               </motion.div>
-              
+
               <div className="text-sm sm:text-base font-medium opacity-80">
                 {stat.label}
               </div>

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaUser, FaPaperPlane } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -41,14 +43,11 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="uppercase tracking-widest text-sm font-semibold mb-4 block text-accent-500">
-              CONTACT
+              {t('contact.hero.subtitle')}
             </span>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight">
-              Nous sommes <br/>
-              <span className="font-bold">à votre écoute</span>
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hero.title') }} />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Une question ? Un rendez-vous ? Notre équipe est là pour vous répondre et vous accompagner.
+              {t('contact.hero.description')}
             </p>
           </motion.div>
         </div>
@@ -63,18 +62,18 @@ const Contact = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
+
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div className="bg-primary-600 text-white p-8 rounded-[2rem] shadow-xl">
-                <h2 className="text-2xl font-bold mb-6">Nos Coordonnées</h2>
+                <h2 className="text-2xl font-bold mb-6">{t('contact.info.title')}</h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent-500 text-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <FaMapMarkerAlt />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Adresse</h4>
+                      <h4 className="font-bold mb-1">{t('contact.info.address')}</h4>
                       <p className="opacity-80 text-sm">123 Boulevard Mohammed V<br />Casablanca 20000, Maroc</p>
                     </div>
                   </div>
@@ -84,7 +83,7 @@ const Contact = () => {
                       <FaPhone />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Téléphone</h4>
+                      <h4 className="font-bold mb-1">{t('contact.info.phone')}</h4>
                       <a href="tel:+212XXXXXXXXX" className="opacity-80 hover:opacity-100 transition-opacity text-sm">+212 XXX XXX XXX</a>
                     </div>
                   </div>
@@ -94,7 +93,7 @@ const Contact = () => {
                       <FaEnvelope />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">Email</h4>
+                      <h4 className="font-bold mb-1">{t('contact.info.email')}</h4>
                       <a href="mailto:contact@mandarona.ma" className="opacity-80 hover:opacity-100 transition-opacity text-sm">contact@mandarona.ma</a>
                     </div>
                   </div>
@@ -102,19 +101,19 @@ const Contact = () => {
               </div>
 
               <div className="bg-accent-100 p-8 rounded-[2rem]">
-                <h3 className="text-xl font-bold mb-4 text-primary-600">Horaires d'ouverture</h3>
+                <h3 className="text-xl font-bold mb-4 text-primary-600">{t('contact.info.hours.title')}</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex justify-between">
-                    <span>Lundi - Vendredi</span>
+                    <span>{t('contact.info.hours.week')}</span>
                     <span className="font-bold">9h00 - 19h00</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Samedi</span>
+                    <span>{t('contact.info.hours.saturday')}</span>
                     <span className="font-bold">9h00 - 13h00</span>
                   </li>
                   <li className="flex justify-between text-red-500">
-                    <span>Dimanche</span>
-                    <span className="font-bold">Fermé</span>
+                    <span>{t('contact.info.hours.sunday')}</span>
+                    <span className="font-bold">{t('contact.info.hours.closed')}</span>
                   </li>
                 </ul>
               </div>
@@ -123,14 +122,12 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-gray-100">
-                <h2 className="text-3xl font-light mb-8 text-primary-600">
-                  Envoyez-nous <span className="font-bold">un message</span>
-                </h2>
-                
+                <h2 className="text-3xl font-light mb-8 text-primary-600" dangerouslySetInnerHTML={{ __html: t('contact.form.title') }} />
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">Nom complet</label>
+                      <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.name')}</label>
                       <input
                         type="text"
                         id="name"
@@ -139,11 +136,11 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
-                        placeholder="Votre nom"
+                        placeholder={t('contact.form.namePlaceholder')}
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">Téléphone</label>
+                      <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.phone')}</label>
                       <input
                         type="tel"
                         id="phone"
@@ -152,14 +149,14 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
-                        placeholder="Votre numéro"
+                        placeholder={t('contact.form.phonePlaceholder')}
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                      <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.email')}</label>
                       <input
                         type="email"
                         id="email"
@@ -168,11 +165,11 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none"
-                        placeholder="votre@email.com"
+                        placeholder={t('contact.form.emailPlaceholder')}
                       />
                     </div>
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-bold text-gray-700 mb-2">Sujet</label>
+                      <label htmlFor="subject" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.subject')}</label>
                       <select
                         id="subject"
                         name="subject"
@@ -180,17 +177,17 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none appearance-none"
                       >
-                        <option value="consultation">Consultation générale</option>
-                        <option value="orthodontie">Orthodontie</option>
-                        <option value="esthetique">Esthétique dentaire</option>
-                        <option value="implants">Implantologie</option>
-                        <option value="urgence">Urgence</option>
+                        <option value="consultation">{t('contact.form.subjects.consultation')}</option>
+                        <option value="orthodontie">{t('contact.form.subjects.orthodontics')}</option>
+                        <option value="esthetique">{t('contact.form.subjects.esthetic')}</option>
+                        <option value="implants">{t('contact.form.subjects.implants')}</option>
+                        <option value="urgence">{t('contact.form.subjects.emergency')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">Message</label>
+                    <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.form.message')}</label>
                     <textarea
                       id="message"
                       name="message"
@@ -198,7 +195,7 @@ const Contact = () => {
                       onChange={handleChange}
                       rows="4"
                       className="w-full px-6 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-accent-500 transition-all outline-none resize-none"
-                      placeholder="Comment pouvons-nous vous aider ?"
+                      placeholder={t('contact.form.messagePlaceholder')}
                     ></textarea>
                   </div>
 
@@ -207,9 +204,9 @@ const Contact = () => {
                     disabled={formStatus === 'sending'}
                     className="w-full bg-primary-600 text-white font-bold py-4 rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                   >
-                    {formStatus === 'sending' ? 'Envoi en cours...' : (
+                    {formStatus === 'sending' ? t('contact.form.sending') : (
                       <>
-                        <span>Envoyer le message</span>
+                        <span>{t('contact.form.submit')}</span>
                         <FaPaperPlane />
                       </>
                     )}
@@ -217,7 +214,7 @@ const Contact = () => {
 
                   {formStatus === 'success' && (
                     <div className="bg-green-50 text-green-700 px-6 py-4 rounded-xl text-center font-medium border border-green-200">
-                      Message envoyé avec succès ! Nous vous répondrons rapidement.
+                      {t('contact.form.success')}
                     </div>
                   )}
                 </form>
@@ -231,14 +228,14 @@ const Contact = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white p-4 rounded-[3rem] shadow-xl overflow-hidden h-[400px] relative">
-             {/* Placeholder for Map */}
-             <div className="w-full h-full bg-[#e5e7eb] rounded-[2.5rem] flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <FaMapMarkerAlt className="text-6xl mx-auto mb-4 text-primary-600" />
-                  <p className="text-xl font-medium">Carte Google Maps</p>
-                  <p>123 Boulevard Mohammed V, Casablanca</p>
-                </div>
-             </div>
+            {/* Placeholder for Map */}
+            <div className="w-full h-full bg-[#e5e7eb] rounded-[2.5rem] flex items-center justify-center">
+              <div className="text-center text-gray-500">
+                <FaMapMarkerAlt className="text-6xl mx-auto mb-4 text-primary-600" />
+                <p className="text-xl font-medium">{t('contact.map.title')}</p>
+                <p>123 Boulevard Mohammed V, Casablanca</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

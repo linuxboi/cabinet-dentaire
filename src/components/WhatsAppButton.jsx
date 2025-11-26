@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
+import { useTranslation } from 'react-i18next';
+
 const WhatsAppButton = () => {
+  const { t } = useTranslation();
   const phoneNumber = '212XXXXXXXXX';
-  const message = encodeURIComponent('Bonjour, je souhaite prendre rendez-vous au Centre Dentaire Mandarona.');
+  const message = encodeURIComponent(t('whatsappButton.message'));
 
   return (
     <motion.a
@@ -24,13 +27,13 @@ const WhatsAppButton = () => {
       >
         <FaWhatsapp className="text-2xl sm:text-3xl" />
       </motion.div>
-      
+
       {/* Pulse effect */}
       <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75"></span>
-      
+
       {/* Tooltip */}
       <span className="hidden sm:block absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl">
-        Contactez-nous
+        {t('whatsappButton.tooltip')}
       </span>
     </motion.a>
   );
