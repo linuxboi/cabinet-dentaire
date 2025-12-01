@@ -1,20 +1,21 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
 
 @theme {
-  --color-primary-50: #f0f9fb;
-  --color-primary-100: #e0f2f7;
-  --color-primary-200: #bce0e9;
-  --color-primary-300: #8ec8d9;
-  --color-primary-400: #58a6c2;
-  --color-primary-500: #3386a6;
-  --color-primary-600: #004a5e;
-  --color-primary-700: #0e5666;
-  --color-primary-800: #114754;
-  --color-primary-900: #133b46;
-  --color-primary-950: #08262f;
+  --color-primary-50: #fdf2f8;
+  --color-primary-100: #fce7f3;
+  --color-primary-200: #fbcfe8;
+  --color-primary-300: #f9a8d4;
+  --color-primary-400: #f472b6;
+  --color-primary-500: #ec008c;
+  --color-primary-600: #db2777;
+  --color-primary-700: #be185d;
+  --color-primary-800: #9d174d;
+  --color-primary-900: #831843;
+  --color-primary-950: #500724;
 
   --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-family-signature: 'Great Vibes', cursive;
 }
 
 /* Smooth scrolling */

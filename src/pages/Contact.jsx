@@ -213,7 +213,7 @@ const Contact = () => {
                   </button>
 
                   {formStatus === 'success' && (
-                    <div className="bg-green-50 text-green-700 px-6 py-4 rounded-xl text-center font-medium border border-green-200">
+                    <div className="bg-primary-50 text-primary-700 px-6 py-4 rounded-xl text-center font-medium border border-primary-200">
                       {t('contact.form.success')}
                     </div>
                   )}

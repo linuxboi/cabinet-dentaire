@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import { FaTooth, FaCheck, FaStar, FaShieldAlt, FaSmile, FaUserMd, FaHeart, FaMicroscope } from 'react-icons/fa';
 import CTA from '../components/CTA';
 
@@ -7,6 +8,31 @@ import { useTranslation } from 'react-i18next';
 
 const Home = () => {
    const { t } = useTranslation();
+   const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false);
+
+   const reviews = [
+      {
+         name: "Hassan Toufik",
+         text: "Excellent service. Dr Awatif Zaki Ziraoui is brilliant and dedicated to patients satisfaction. At each review appointment she will listened to your concerns and is always upfront about timelines.",
+         rating: 5
+      },
+      {
+         name: "Dirar Elharti",
+         text: "Excellent service The Best",
+         rating: 5
+      },
+      {
+         name: "Omar BENJELLOUN",
+         text: "Reasonable appointment times and very competent dentist",
+         rating: 5
+      },
+      {
+         name: "Nabila AIT ALI",
+         text: "Very, very competent dentist with excellent follow-up",
+         rating: 5
+      }
+   ];
+
    return (
       <div className="font-sans text-gray-800 overflow-x-hidden">
          {/* Hero Section */}
@@ -110,9 +136,27 @@ const Home = () => {
                      <p className="text-gray-500 text-lg leading-relaxed mb-8">
                         {t('home.intro.description')}
                      </p>
-                     <Link to="/a-propos" className="text-gray-900 font-bold flex items-center gap-2 hover:gap-4 transition-all group">
-                        {t('home.intro.learnMore')} <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
-                     </Link>
+                     <button
+                        onClick={() => setIsLearnMoreOpen(!isLearnMoreOpen)}
+                        className="text-gray-900 font-bold flex items-center gap-2 hover:gap-4 transition-all group mb-4"
+                     >
+                        {t('home.intro.learnMore')} <span className={`text-xl transition-transform ${isLearnMoreOpen ? 'rotate-90' : 'group-hover:translate-x-1'}`}>→</span>
+                     </button>
+
+                     <AnimatePresence>
+                        {isLearnMoreOpen && (
+                           <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="overflow-hidden"
+                           >
+                              <p className="text-gray-600 leading-relaxed bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                                 {t('home.intro.extendedDescription')}
+                              </p>
+                           </motion.div>
+                        )}
+                     </AnimatePresence>
                   </div>
                </div>
             </div>
@@ -287,49 +331,7 @@ const Home = () => {
             </div>
          </section>
 
-         {/* Latest News */}
-         <section className="py-20 lg:py-32 bg-gray-50">
-            <div className="container mx-auto px-4">
-               <div className="flex justify-between items-end mb-12">
-                  <h2 className="text-3xl lg:text-5xl font-light text-gray-900">{t('home.news.title')}</h2>
-                  <Link to="/blog" className="hidden md:inline-block text-gray-900 font-bold hover:text-primary-600 transition-colors">
-                     {t('home.news.viewBlog')} →
-                  </Link>
-               </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                     { title: t('home.news.items.checkups.title'), date: '24 Oct 2023', img: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80', desc: t('home.news.items.checkups.desc') },
-                     { title: t('home.news.items.tips.title'), date: '15 Oct 2023', img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80', desc: t('home.news.items.tips.desc') },
-                     { title: t('home.news.items.implants.title'), date: '28 Sep 2023', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80', desc: t('home.news.items.implants.desc') }
-                  ].map((item, index) => (
-                     <div key={index} className="group cursor-pointer">
-                        <div className="rounded-[2rem] overflow-hidden aspect-[4/3] mb-6 relative shadow-md">
-                           <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                           <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-gray-900">
-                              {item.date}
-                           </div>
-                        </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-primary-600 transition-colors leading-snug">
-                           {item.title}
-                        </h3>
-                        <p className="text-gray-500 text-sm mb-4 line-clamp-2">
-                           {item.desc}
-                        </p>
-                        <span className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-200 pb-1 group-hover:border-primary-600 transition-colors">
-                           {t('home.news.readMore')}
-                        </span>
-                     </div>
-                  ))}
-               </div>
-
-               <div className="mt-12 text-center md:hidden">
-                  <Link to="/blog" className="inline-block border border-gray-300 rounded-full px-8 py-3 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors">
-                     {t('home.news.viewBlog')}
-                  </Link>
-               </div>
-            </div>
-         </section>
 
          {/* Testimonials */}
          <section className="py-20 lg:py-32 text-center">
@@ -342,10 +344,17 @@ const Home = () => {
                </h2>
                <p className="text-gray-400 text-sm mb-20">{t('home.testimonials.note')}</p>
 
-               <div className="flex justify-center gap-4 lg:gap-8 overflow-hidden opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                  {[1, 2, 3, 4, 5, 6].map((i) => (
-                     <div key={i} className="w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
-                        <img src={`https://i.pravatar.cc/300?img=${i + 10}`} alt="Patient" className="w-full h-full object-cover" />
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {reviews.map((review, index) => (
+                     <div key={index} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 text-left h-full flex flex-col">
+                        <div className="flex gap-1 text-primary-500 mb-4 text-sm">
+                           {[...Array(review.rating)].map((_, i) => <FaStar key={i} />)}
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow italic">"{review.text}"</p>
+                        <div className="mt-auto">
+                           <p className="font-bold text-gray-900">{review.name}</p>
+                           <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Patient</p>
+                        </div>
                      </div>
                   ))}
                </div>

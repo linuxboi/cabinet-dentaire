@@ -56,7 +56,7 @@ const Header = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
               <img src={LogoIcon} alt="Mandarona" className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center">
               <span className="text-lg sm:text-2xl font-bold text-gray-900 tracking-tight leading-none">Mandarona</span>
               <span className="text-xs sm:text-sm text-gray-500 font-medium tracking-wide">{t('header.dentalCenter')}</span>
             </div>

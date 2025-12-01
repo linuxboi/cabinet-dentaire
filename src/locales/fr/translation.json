@@ -3,7 +3,7 @@
         "home": "Accueil",
         "team": "Équipe",
         "services": "Soins",
-        "beforeAfter": "Avant/Après",
+        "beforeAfter": "Galerie",
         "contact": "Contact",
         "bookAppointment": "Prendre rendez-vous",
         "dentalCenter": "Centre Dentaire"
@@ -42,7 +42,7 @@
     },
     "home": {
         "hero": {
-            "title": "Souriez, le bonheur <br/> <span class=\"font-medium\">est contagieux</span>",
+            "title": "Souriez, le bonheur <br/> <span class=\"font-signature text-6xl md:text-8xl text-primary-500 block mt-2\">est contagieux</span>",
             "subtitle": "Bienvenue au Centre Dentaire Mandarona. Une équipe d'experts dédiée à votre santé bucco-dentaire dans un cadre moderne et chaleureux.",
             "bookAppointment": "Prendre Rendez-vous",
             "emergency": "Urgence dentaire ?",
@@ -54,7 +54,8 @@
             "slogan": "Votre sourire mérite l'excellence.",
             "title": "Au Centre Dentaire Mandarona, nous allions expertise clinique et technologies de pointe pour vous offrir des soins personnalisés.",
             "description": "Bienvenue dans notre cabinet ! Nos dentistes et notre équipe sont impatients de prendre soin de vous et de votre sourire. Nous comprenons à quel point la santé bucco-dentaire est liée à votre santé globale, votre confiance et votre apparence. Nous sommes fiers de cultiver un environnement dentaire amical et positif où vous pourrez toujours vous sentir à l'aise.",
-            "learnMore": "En savoir plus"
+            "learnMore": "En savoir plus",
+            "extendedDescription": "Notre approche holistique prend en compte l'ensemble de votre bien-être. Nous utilisons des techniques mini-invasives et des matériaux biocompatibles pour assurer des résultats durables et naturels. Que ce soit pour des soins préventifs, esthétiques ou chirurgicaux, chaque étape est expliquée en détail pour vous garantir une expérience sereine et transparente."
         },
         "whyChooseUs": {
             "title": "Pourquoi choisir notre clinique",
