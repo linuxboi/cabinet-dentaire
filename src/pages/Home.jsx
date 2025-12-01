@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaTooth, FaCheck, FaStar, FaShieldAlt, FaSmile, FaUserMd, FaHeart, FaMicroscope } from 'react-icons/fa';
 import CTA from '../components/CTA';
 
@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 const Home = () => {
    const { t } = useTranslation();
    const [isLearnMoreOpen, setIsLearnMoreOpen] = useState(false);
+   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
    const reviews = [
       {
@@ -42,6 +43,13 @@ const Home = () => {
          img: NabilaImg
       }
    ];
+
+   useEffect(() => {
+      const timer = setInterval(() => {
+         setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+      }, 5000);
+      return () => clearInterval(timer);
+   }, [reviews.length]);
 
    return (
       <div className="font-sans text-gray-800 overflow-x-hidden">
@@ -344,48 +352,90 @@ const Home = () => {
 
 
          {/* Testimonials */}
-         <section className="py-20 lg:py-32 text-center">
+         <section className="py-20 lg:py-32 bg-gray-50 overflow-hidden">
             <div className="container mx-auto px-4">
-               <div className="flex justify-center gap-1 text-primary-600 mb-8">
-                  {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
+               <div className="text-center mb-16">
+                  <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-4">
+                     {t('home.testimonials.text')}
+                  </h2>
                </div>
-               <h2 className="text-3xl lg:text-5xl font-light text-gray-900 mb-6 max-w-4xl mx-auto leading-tight">
-                  {t('home.testimonials.text')}
-               </h2>
-               <p className="text-gray-400 text-sm mb-20">{t('home.testimonials.note')}</p>
 
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {reviews.map((review, index) => (
-                     <div key={index} className="bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-xl transition-all duration-300 text-left h-full flex flex-col relative group">
-                        <div className="absolute -top-6 right-8 w-12 h-12 bg-white rounded-full p-2 shadow-md flex items-center justify-center">
-                           <img src={GoogleLogo} alt="Google" className="w-full h-full object-contain" />
-                        </div>
-
-                        <div className="flex items-center gap-4 mb-6">
-                           <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-100 flex-shrink-0">
-                              {review.img ? (
-                                 <img src={review.img} alt={review.name} className="w-full h-full object-cover" />
-                              ) : (
-                                 <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-xl">
-                                    {review.name.charAt(0)}
-                                 </div>
-                              )}
-                           </div>
-                           <div>
-                              <p className="font-bold text-gray-900 leading-tight">{review.name}</p>
-                              <div className="flex gap-0.5 text-yellow-400 text-xs mt-1">
-                                 {[...Array(review.rating)].map((_, i) => <FaStar key={i} />)}
-                              </div>
-                           </div>
-                        </div>
-
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow italic">"{review.text}"</p>
-
-                        <div className="mt-auto pt-4 border-t border-gray-100">
-                           <p className="text-xs text-gray-400 uppercase tracking-wider">Patient Google</p>
+               <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
+                  {/* Left: Rating Card */}
+                  <div className="bg-white p-10 rounded-[2.5rem] shadow-xl w-full lg:w-1/3 flex flex-col items-center text-center relative z-10">
+                     <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+                        <img src={GoogleLogo} alt="Google" className="w-10 h-10 object-contain" />
+                     </div>
+                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Mandarona</h3>
+                     <div className="flex items-center gap-2 mb-2">
+                        <span className="text-4xl font-bold text-gray-900">4.9</span>
+                        <div className="flex text-yellow-400 text-xl">
+                           {[1, 2, 3, 4, 5].map(i => <FaStar key={i} />)}
                         </div>
                      </div>
-                  ))}
+                     <p className="text-gray-500 text-sm mb-8">{t('home.testimonials.note')}</p>
+
+                     <a href="https://g.page/r/..." target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2">
+                        <span className="text-sm">Notez-nous sur</span>
+                        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg" alt="Google" className="h-5 opacity-90" />
+                     </a>
+                  </div>
+
+                  {/* Right: Carousel */}
+                  <div className="w-full lg:w-2/3 relative h-[350px] lg:h-[300px]">
+                     <AnimatePresence mode="wait">
+                        <motion.div
+                           key={currentReviewIndex}
+                           initial={{ opacity: 0, x: 50 }}
+                           animate={{ opacity: 1, x: 0 }}
+                           exit={{ opacity: 0, x: -50 }}
+                           transition={{ duration: 0.5 }}
+                           className="absolute inset-0"
+                        >
+                           <div className="bg-white p-10 rounded-[2.5rem] shadow-lg h-full flex flex-col justify-center relative">
+                              <div className="absolute top-8 right-8">
+                                 <img src={GoogleLogo} alt="Google" className="w-8 h-8 opacity-50" />
+                              </div>
+
+                              <div className="flex items-center gap-6 mb-8">
+                                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gray-50 shadow-sm flex-shrink-0">
+                                    {reviews[currentReviewIndex].img ? (
+                                       <img src={reviews[currentReviewIndex].img} alt={reviews[currentReviewIndex].name} className="w-full h-full object-cover" />
+                                    ) : (
+                                       <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-2xl">
+                                          {reviews[currentReviewIndex].name.charAt(0)}
+                                       </div>
+                                    )}
+                                 </div>
+                                 <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">{reviews[currentReviewIndex].name}</h4>
+                                    <div className="flex text-yellow-400 text-sm mb-1">
+                                       {[...Array(reviews[currentReviewIndex].rating)].map((_, i) => <FaStar key={i} />)}
+                                    </div>
+                                    <p className="text-gray-400 text-xs">il y a 2 jours</p>
+                                 </div>
+                              </div>
+
+                              <p className="text-gray-600 text-lg leading-relaxed italic">
+                                 "{reviews[currentReviewIndex].text}"
+                              </p>
+                           </div>
+                        </motion.div>
+                     </AnimatePresence>
+
+                     {/* Navigation Dots */}
+                     <div className="absolute -bottom-12 left-0 right-0 flex justify-center gap-3">
+                        {reviews.map((_, index) => (
+                           <button
+                              key={index}
+                              onClick={() => setCurrentReviewIndex(index)}
+                              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReviewIndex ? 'bg-primary-600 w-8' : 'bg-gray-300 hover:bg-primary-300'
+                                 }`}
+                              aria-label={`Go to review ${index + 1}`}
+                           />
+                        ))}
+                     </div>
+                  </div>
                </div>
             </div>
          </section>

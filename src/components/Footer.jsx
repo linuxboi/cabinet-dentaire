@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
+import LogoIcon from '../assets/icon.png';
+
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
@@ -12,9 +14,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Brand */}
           <div>
-            <Link to="/" className="block mb-6">
-              <span className="text-3xl font-bold tracking-tight text-white">Mandarona</span>
-              <span className="block text-sm text-gray-400 font-medium tracking-widest uppercase mt-1">{t('header.dentalCenter')}</span>
+            <Link to="/" className="flex items-center gap-3 mb-6">
+              <img src={LogoIcon} alt="Mandarona" className="w-10 h-10" />
+              <div>
+                <span className="text-2xl font-bold tracking-tight text-white block">Mandarona</span>
+                <span className="text-xs text-gray-400 font-medium tracking-widest uppercase">{t('header.dentalCenter')}</span>
+              </div>
             </Link>
             <p className="text-gray-400 leading-relaxed mb-6 italic font-light text-lg">
               {t('footer.slogan')}
