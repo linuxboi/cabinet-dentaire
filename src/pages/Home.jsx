@@ -4,6 +4,12 @@ import { useState } from 'react';
 import { FaTooth, FaCheck, FaStar, FaShieldAlt, FaSmile, FaUserMd, FaHeart, FaMicroscope } from 'react-icons/fa';
 import CTA from '../components/CTA';
 
+import BenjellounImg from '../assets/benjelloun.png';
+import HassanImg from '../assets/hassan.png';
+import DirarImg from '../assets/dirar.png';
+import NabilaImg from '../assets/nabila.png';
+import GoogleLogo from '../assets/google.png';
+
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
@@ -14,22 +20,26 @@ const Home = () => {
       {
          name: "Hassan Toufik",
          text: "Excellent service. Dr Awatif Zaki Ziraoui is brilliant and dedicated to patients satisfaction. At each review appointment she will listened to your concerns and is always upfront about timelines.",
-         rating: 5
+         rating: 5,
+         img: HassanImg
       },
       {
          name: "Dirar Elharti",
          text: "Excellent service The Best",
-         rating: 5
+         rating: 5,
+         img: DirarImg
       },
       {
          name: "Omar BENJELLOUN",
          text: "Reasonable appointment times and very competent dentist",
-         rating: 5
+         rating: 5,
+         img: BenjellounImg
       },
       {
          name: "Nabila AIT ALI",
          text: "Very, very competent dentist with excellent follow-up",
-         rating: 5
+         rating: 5,
+         img: NabilaImg
       }
    ];
 
@@ -346,14 +356,33 @@ const Home = () => {
 
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {reviews.map((review, index) => (
-                     <div key={index} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 text-left h-full flex flex-col">
-                        <div className="flex gap-1 text-primary-500 mb-4 text-sm">
-                           {[...Array(review.rating)].map((_, i) => <FaStar key={i} />)}
+                     <div key={index} className="bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-xl transition-all duration-300 text-left h-full flex flex-col relative group">
+                        <div className="absolute -top-6 right-8 w-12 h-12 bg-white rounded-full p-2 shadow-md flex items-center justify-center">
+                           <img src={GoogleLogo} alt="Google" className="w-full h-full object-contain" />
                         </div>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow italic">"{review.text}"</p>
-                        <div className="mt-auto">
-                           <p className="font-bold text-gray-900">{review.name}</p>
-                           <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">Patient</p>
+
+                        <div className="flex items-center gap-4 mb-6">
+                           <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-100 flex-shrink-0">
+                              {review.img ? (
+                                 <img src={review.img} alt={review.name} className="w-full h-full object-cover" />
+                              ) : (
+                                 <div className="w-full h-full bg-primary-50 flex items-center justify-center text-primary-300 font-bold text-xl">
+                                    {review.name.charAt(0)}
+                                 </div>
+                              )}
+                           </div>
+                           <div>
+                              <p className="font-bold text-gray-900 leading-tight">{review.name}</p>
+                              <div className="flex gap-0.5 text-yellow-400 text-xs mt-1">
+                                 {[...Array(review.rating)].map((_, i) => <FaStar key={i} />)}
+                              </div>
+                           </div>
+                        </div>
+
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow italic">"{review.text}"</p>
+
+                        <div className="mt-auto pt-4 border-t border-gray-100">
+                           <p className="text-xs text-gray-400 uppercase tracking-wider">Patient Google</p>
                         </div>
                      </div>
                   ))}

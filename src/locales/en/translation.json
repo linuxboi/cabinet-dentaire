@@ -3,7 +3,7 @@
         "home": "Home",
         "team": "Team",
         "services": "Services",
-        "beforeAfter": "Before/After",
+        "beforeAfter": "Gallery",
         "contact": "Contact",
         "bookAppointment": "Book Appointment",
         "dentalCenter": "Dental Center"
@@ -42,7 +42,7 @@
     },
     "home": {
         "hero": {
-            "title": "Smile, happiness <br/> <span class=\"font-medium\">is contagious</span>",
+            "title": "Smile, happiness <br/> <span class=\"font-signature text-6xl md:text-8xl text-primary-500 block mt-2\">is contagious</span>",
             "subtitle": "Welcome to Mandarona Dental Center. A team of experts dedicated to your oral health in a modern and warm setting.",
             "bookAppointment": "Book Appointment",
             "emergency": "Dental Emergency?",
@@ -54,7 +54,8 @@
             "slogan": "Your smile deserves excellence.",
             "title": "At Mandarona Dental Center, we combine clinical expertise and cutting-edge technologies to offer you personalized care.",
             "description": "Welcome to our office! Our dentists and team look forward to caring for you and your smile. We understand how closely oral health is linked to your overall health, confidence, and appearance. We pride ourselves on cultivating a friendly and positive dental environment where you can always feel at ease.",
-            "learnMore": "Learn more"
+            "learnMore": "Learn more",
+            "extendedDescription": "Our holistic approach takes into account your overall well-being. We use minimally invasive techniques and biocompatible materials to ensure durable and natural results. Whether for preventive, esthetic, or surgical care, every step is explained in detail to guarantee you a serene and transparent experience."
         },
         "whyChooseUs": {
             "title": "Why choose our clinic",
