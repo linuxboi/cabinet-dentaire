@@ -2,6 +2,7 @@
     "header": {
         "home": "Accueil",
         "team": "Équipe",
+        "advice": "Conseils",
         "services": "Soins",
         "beforeAfter": "Galerie",
         "contact": "Contact",
@@ -211,23 +212,15 @@
         },
         "categories": {
             "surgery": "CHIRURGIE",
-            "kids": "SOINS ENFANTS",
-            "esthetic": "ESTHÉTIQUE",
-            "periodontics": "PARODONTIE",
-            "emergency": "URGENCES",
-            "orthodontics": "ORTHODONTIE",
-            "prevention": "PRÉVENTION"
-        },
-        "items": {
-            "implantology": "Implantologie",
-            "pedodontics": "Pédodontie",
-            "whitening": "Blanchiment Dentaire",
-            "extraction": "Extraction Dentaire",
             "gumCare": "Soins des Gencives",
             "emergencies": "Urgences Dentaires",
             "alignment": "Alignement Dentaire",
             "conservative": "Soins Conservateurs",
-            "veneers": "Facettes Dentaires"
+            "veneers": "Facettes Dentaires",
+            "surgeryGroup": "Chirurgie & Implants",
+            "estheticGroup": "Esthétique Dentaire",
+            "orthoGroup": "Orthodontie",
+            "generalGroup": "Soins Généraux"
         },
         "learnMore": "En savoir plus",
         "cta": {
@@ -344,6 +337,30 @@
         },
         "map": {
             "title": "Carte Google Maps"
+        }
+    },
+    "conseilsPage": {
+        "hero": {
+            "title": "Nos Conseils",
+            "description": "Retrouvez ici toutes nos recommandations pour prendre soin de votre santé bucco-dentaire au quotidien."
+        },
+        "items": {
+            "brushing": {
+                "title": "Le Brossage",
+                "description": "Brossez-vous les dents au moins deux fois par jour, matin et soir, pendant 2 minutes. Utilisez une brosse à dents souple et changez-la tous les 3 mois."
+            },
+            "flossing": {
+                "title": "Le Fil Dentaire",
+                "description": "L'utilisation du fil dentaire est indispensable une fois par jour, de préférence le soir, pour nettoyer les espaces interdentaires inaccessibles à la brosse."
+            },
+            "diet": {
+                "title": "L'Alimentation",
+                "description": "Limitez la consommation de sucre et d'aliments acides. Privilégiez l'eau comme boisson principale et évitez le grignotage entre les repas."
+            },
+            "visits": {
+                "title": "Visites Régulières",
+                "description": "Consultez votre dentiste au moins une fois par an pour un contrôle de routine et un détartrage, même en l'absence de douleur."
+            }
         }
     }
 }

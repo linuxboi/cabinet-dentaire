@@ -13,6 +13,7 @@ export default {
           200: '#fbcfe8',
           300: '#f9a8d4',
           400: '#f472b6',
+          'light-pink': '#ffb6c1', // Light pink for buttons
           500: '#ec008c', // Secondary color from user
           600: '#db2777',
           700: '#be185d',

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhone, FaEnvelope, FaTiktok } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 import LogoIcon from '../assets/icon.png';
@@ -25,14 +25,17 @@ const Footer = () => {
               {t('footer.slogan')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
-                <FaFacebookF />
+              <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                <FaFacebookF className="text-xl" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
-                <FaInstagram />
+              <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                <FaInstagram className="text-xl" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
-                <FaLinkedinIn />
+              <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                <FaLinkedinIn className="text-xl" />
+              </a>
+              <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
+                <FaTiktok className="text-xl" />
               </a>
             </div>
           </div>
@@ -45,7 +48,7 @@ const Footer = () => {
               <li><Link to="/equipe" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourTeam')}</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.ourServices')}</Link></li>
               <li><Link to="/avant-apres" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.gallery')}</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.blog')}</Link></li>
+              <li><Link to="/conseils" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.advice')}</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors">{t('header.contact')}</Link></li>
             </ul>
           </div>
@@ -73,9 +76,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-white">{t('footer.legalInfo')}</h3>
             <ul className="space-y-3">
-              <li><Link to="/mentions-legales" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.legalMentions')}</Link></li>
-              <li><Link to="/politique-confidentialite" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.privacyPolicy')}</Link></li>
-              <li><Link to="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.cookieManagement')}</Link></li>
+              <li><a href="/mentions-legales.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.legalMentions')}</a></li>
+              <li><a href="/politique-confidentialite.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.privacyPolicy')}</a></li>
+              <li><a href="/cookies.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.cookieManagement')}</a></li>
             </ul>
           </div>
         </div>

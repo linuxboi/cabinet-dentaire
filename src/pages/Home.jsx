@@ -78,7 +78,7 @@ const Home = () => {
                      transition={{ delay: 0.2 }}
                      className="flex flex-col sm:flex-row items-start gap-8 mb-16"
                   >
-                     <Link to="/contact" className="bg-primary-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl">
+                     <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-primary-200 transition-colors shadow-lg hover:shadow-xl">
                         {t('home.hero.bookAppointment')}
                      </Link>
                      <div className="text-sm text-gray-500 pt-1">
@@ -247,14 +247,12 @@ const Home = () => {
                   </Link>
                </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {[
-                     { title: t('home.services.items.orthodontics.title'), desc: t('home.services.items.orthodontics.desc'), icon: FaTooth },
-                     { title: t('home.services.items.carePrevention.title'), desc: t('home.services.items.carePrevention.desc'), icon: FaShieldAlt },
-                     { title: t('home.services.items.esthetic.title'), desc: t('home.services.items.esthetic.desc'), icon: FaSmile },
-                     { title: t('home.services.items.surgery.title'), desc: t('home.services.items.surgery.desc'), icon: FaUserMd },
-                     { title: t('home.services.items.periodontics.title'), desc: t('home.services.items.periodontics.desc'), icon: FaHeart },
-                     { title: t('home.services.items.prosthesis.title'), desc: t('home.services.items.prosthesis.desc'), icon: FaMicroscope }
+                     { title: t('servicesPage.categories.surgery'), desc: t('servicesPage.descriptions.surgery'), icon: FaUserMd },
+                     { title: t('servicesPage.categories.esthetic'), desc: t('servicesPage.descriptions.esthetic'), icon: FaSmile },
+                     { title: t('servicesPage.categories.orthodontics'), desc: t('servicesPage.descriptions.orthodontics'), icon: FaTooth },
+                     { title: t('servicesPage.categories.general'), desc: t('servicesPage.descriptions.general'), icon: FaShieldAlt }
                   ].map((service, index) => (
                      <div key={index} className="bg-white/5 border border-white/10 rounded-[2rem] p-8 hover:bg-white/10 transition-all duration-300 group cursor-pointer">
                         <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-white group-hover:text-primary-900 transition-colors duration-300">

@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Team from './pages/Team';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Conseils from './pages/Conseils';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/equipe" element={<Team />} />
             <Route path="/avant-apres" element={<Gallery />} />
+            <Route path="/conseils" element={<Conseils />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

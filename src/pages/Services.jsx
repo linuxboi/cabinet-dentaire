@@ -6,48 +6,27 @@ const Services = () => {
   const services = [
     {
       category: t('servicesPage.categories.surgery'),
-      title: t('servicesPage.items.implantology'),
+      title: t('servicesPage.items.surgeryGroup'),
+      description: t('servicesPage.descriptions.surgery'),
       image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: t('servicesPage.categories.kids'),
-      title: t('servicesPage.items.pedodontics'),
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80'
-    },
-    {
       category: t('servicesPage.categories.esthetic'),
-      title: t('servicesPage.items.whitening'),
+      title: t('servicesPage.items.estheticGroup'),
+      description: t('servicesPage.descriptions.esthetic'),
       image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      category: t('servicesPage.categories.surgery'),
-      title: t('servicesPage.items.extraction'),
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      category: t('servicesPage.categories.periodontics'),
-      title: t('servicesPage.items.gumCare'),
-      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      category: t('servicesPage.categories.emergency'),
-      title: t('servicesPage.items.emergencies'),
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80'
     },
     {
       category: t('servicesPage.categories.orthodontics'),
-      title: t('servicesPage.items.alignment'),
+      title: t('servicesPage.items.orthoGroup'),
+      description: t('servicesPage.descriptions.orthodontics'),
       image: 'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=800&q=80'
     },
     {
-      category: t('servicesPage.categories.prevention'),
-      title: t('servicesPage.items.conservative'),
-      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      category: t('servicesPage.categories.esthetic'),
-      title: t('servicesPage.items.veneers'),
-      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80'
+      category: t('servicesPage.categories.general'),
+      title: t('servicesPage.items.generalGroup'),
+      description: t('servicesPage.descriptions.general'),
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80'
     }
   ];
 
@@ -94,9 +73,12 @@ const Services = () => {
                     <span className="text-white/80 text-xs font-bold uppercase tracking-widest mb-2 block">
                       {service.category}
                     </span>
-                    <h3 className="text-3xl font-light text-white">
+                    <h3 className="text-3xl font-light text-white mb-4">
                       {service.title}
                     </h3>
+                    <p className="text-white/90 text-sm leading-relaxed line-clamp-3">
+                      {service.description}
+                    </p>
                   </div>
 
                   <div>

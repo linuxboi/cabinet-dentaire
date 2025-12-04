@@ -41,6 +41,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: t('header.home'), hasDropdown: false },
     { path: '/equipe', label: t('header.team'), hasDropdown: false },
+    { path: '/conseils', label: t('header.advice'), hasDropdown: false },
     { path: '/services', label: t('header.services'), hasDropdown: true },
     { path: '/avant-apres', label: t('header.beforeAfter'), hasDropdown: false },
     { path: '/contact', label: t('header.contact'), hasDropdown: false },
@@ -57,6 +58,7 @@ const Header = () => {
             <div className="flex flex-col items-center">
               <span className="text-lg sm:text-2xl font-bold text-gray-900 tracking-tight leading-none">Mandarona</span>
               <span className="text-xs sm:text-sm text-gray-500 font-medium tracking-wide">{t('header.dentalCenter')}</span>
+              <span className="hidden lg:block text-[10px] text-primary-500 font-signature mt-1">Souriez, le bonheur est contagieux</span>
             </div>
           </Link>
 
@@ -97,7 +99,7 @@ const Header = () => {
               <span className="hidden xl:inline">+212 6XX XX XX XX</span>
             </a>
 
-            <Link to="/contact" className="bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5">
+            <Link to="/contact" className="bg-primary-light-pink text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-primary-200 transition-all shadow-lg hover:shadow-primary-200 transform hover:-translate-y-0.5">
               {t('header.bookAppointment')}
             </Link>
           </div>
@@ -158,7 +160,7 @@ const Header = () => {
                   <FaPhoneAlt className="text-primary-600" />
                   <span>+212 5XX XX XX XX</span>
                 </a>
-                <Link to="/contact" className="btn bg-primary-600 text-white w-full justify-center rounded-xl font-bold hover:bg-primary-700 py-4 shadow-lg" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/contact" className="btn bg-primary-light-pink text-gray-900 w-full justify-center rounded-xl font-bold hover:bg-primary-200 py-4 shadow-lg" onClick={() => setIsMobileMenuOpen(false)}>
                   {t('header.bookAppointment')}
                 </Link>
               </motion.div>
