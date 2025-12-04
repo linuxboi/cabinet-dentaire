@@ -61,7 +61,7 @@ const Home = () => {
                   <motion.h1
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
-                     className="text-5xl lg:text-7xl font-light text-gray-900 mb-6 leading-[1.1]"
+                     className="text-4xl lg:text-7xl font-light text-gray-900 mb-6 leading-[1.1]"
                      dangerouslySetInnerHTML={{ __html: t('home.hero.title') }}
                   />
                   <motion.p
@@ -312,7 +312,7 @@ const Home = () => {
 
          {/* Stats/Quote */}
          <section className="relative">
-            <div className="relative h-[600px] lg:h-[700px]">
+            <div className="relative min-h-[500px] lg:h-[700px]">
                <div className="absolute inset-0">
                   <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1920&q=80" alt="Doctor" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
@@ -380,7 +380,7 @@ const Home = () => {
                   </div>
 
                   {/* Right: Carousel */}
-                  <div className="w-full lg:w-2/3 relative h-[350px] lg:h-[300px]">
+                  <div className="w-full lg:w-2/3 relative min-h-[350px] lg:h-[300px] flex flex-col">
                      <AnimatePresence mode="wait">
                         <motion.div
                            key={currentReviewIndex}

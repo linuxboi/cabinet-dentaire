@@ -68,7 +68,7 @@ const Gallery = () => {
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
                     {t('gallery.before')}
                   </div>
-                  <div className="h-80 bg-gray-200 rounded-[2rem] overflow-hidden shadow-inner">
+                  <div className="aspect-[4/3] bg-gray-200 rounded-[2rem] overflow-hidden shadow-inner">
                     {/* Placeholder for Before Image */}
                     <div className="w-full h-full flex items-center justify-center text-gray-400">
                       Image Avant
@@ -80,7 +80,7 @@ const Gallery = () => {
                   <div className="absolute top-4 left-4 bg-primary-600/90 text-white backdrop-blur px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
                     {t('gallery.after')}
                   </div>
-                  <div className="h-80 bg-accent-100 rounded-[2rem] overflow-hidden shadow-inner">
+                  <div className="aspect-[4/3] bg-accent-100 rounded-[2rem] overflow-hidden shadow-inner">
                     {/* Placeholder for After Image */}
                     <div className="w-full h-full flex items-center justify-center text-primary-600/50">
                       Image Après
@@ -143,7 +143,7 @@ const Gallery = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 group-hover:scale-105 transition-transform duration-700"></div>
                   <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
                     <span className="inline-block px-3 py-1 bg-accent-500 text-primary-600 rounded-full text-xs font-bold mb-2">

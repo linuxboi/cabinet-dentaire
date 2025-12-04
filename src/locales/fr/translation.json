@@ -220,7 +220,16 @@
             "surgeryGroup": "Chirurgie & Implants",
             "estheticGroup": "Esthétique Dentaire",
             "orthoGroup": "Orthodontie",
-            "generalGroup": "Soins Généraux"
+            "generalGroup": "Soins Généraux",
+            "esthetic": "ESTHÉTIQUE",
+            "orthodontics": "ORTHODONTIE",
+            "general": "GÉNÉRAL"
+        },
+        "descriptions": {
+            "surgery": "Extractions, implants et interventions chirurgicales.",
+            "esthetic": "Blanchiment, facettes et sourire parfait.",
+            "orthodontics": "Alignement dentaire pour enfants et adultes.",
+            "general": "Soins courants, détartrage et prévention."
         },
         "learnMore": "En savoir plus",
         "cta": {
